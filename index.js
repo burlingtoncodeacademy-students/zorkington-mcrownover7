@@ -35,8 +35,11 @@ function sleep(ms) {
 // const wrap = require('word-wrap')
 
 //creating a word wrap function that can surround a string and supply a width (80 for this project).
-const wrap = (s, w) =>
-  s.replace(new RegExp(`(?![^\\n]{1,${w}}$)([^\\n]{1,${w}})\\s`, "g"), "$1\n");
+var wrap = (string, width) =>
+  string.replace(
+    new RegExp(`(?![^\\n]{1,${width}}$)([^\\n]{1,${width}})\\s`, "g"),
+    "$1\n"
+  );
 
 //calling game start function.
 start();
